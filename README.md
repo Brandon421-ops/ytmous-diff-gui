@@ -63,6 +63,37 @@ local
     └── watch.ejs
 ```
 
+# Deployment
+
+Table of contents
+
+- Quick & easy deployment
+- Deployment configuration explaination
+- how to use email OTP Verification mode
+- Advanced Deployment
+- Filesystem
+- Works For School/Home Computers
+
+## Quick & Easy Deployment Options
+
+[![Deploy to Heroku](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/Brandon421-ops/ytmous)
+<br>
+[![Run on Replit](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/replit.svg)](https://replit.com/github/Brandon421-ops/ytmous)
+<br>
+[![Deploy to IBM Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/ibmcloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/Brandon421-ops/ytmous)
+<br>
+[![Deploy to Amplify Console](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/Brandon421-ops/ytmous)
+<br>
+[![Run on Google Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/googlecloud.svg)](https://deploy.cloud.run/?git_repo=https://github.com/Brandon421-ops/ytmous)
+<br>
+[![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/new/template/pBzeiN)
+<br>
+[![Deploy To Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Brandon421-ops/ytmous&branch=main&name=ytmous)
+<br>
+[![Deploy to Render](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/main/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Brandon421-ops/ytmous)
+<br>
+[![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/Brandon421-ops/ytmous)
+
 ## Starting the server
 If this is your first time running this server, You may need to install it's dependencies first by executing `npm install`. 
 
