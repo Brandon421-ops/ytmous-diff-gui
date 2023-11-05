@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/Toard.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title><%= channel.metadata.title %></title>
+    <meta name="description" content="<%= about.description %>" />
+    <% if (channel.metadata.thumbnail?.length) { %><meta property="og:image" content="/yt3<%- (new URL(channel.metadata.thumbnail[0]?.url)).pathname %>" /><% } %>
+    <meta name="twitter:card" content="summary_large_image" />
+    <% if (channel.header.banner?.length) { %><meta name="twitter:image" content="/yt3<%- (new URL(channel.header.banner[0].url)).pathname %>" /><% } %>
+    <meta name="author" content="ytmous - Anonymous YouTube proxy" />
+  </head>
+  <body>
+    <span class="fixed border bottom left"
+      ><a href="/"><b>ytmous</b></a> - Anonymous Youtube Proxy</span
+    >
+    <a class="fixed border bottom right" id="sbtn" href="#sbox">Search</a>
+    <div id="sbox" class="fixed bottom right popup">
+      <form action="/s" method="GET">
+        <input
+          name="q"
+          class="border"
+          type="text"
+          placeholder="Search video...."
+        />
+      </form>
+    </div>
+    <div>
+      <% if (channel.header.banner?.length) { %>
+        <img style="width: 100vw; max-width: 100vw;" src="/yt3<%- (new URL(channel.header.banner[0].url)).pathname %>" /><br>
+      <% } %>
+      <div>
+        <% if (channel.metadata.thumbnail?.length) { %>
+          <img src="/yt3<%- (new URL(channel.metadata.thumbnail[0]?.url)).pathname %>" style="width: 90px; float: left; padding: 25px; border-radius: 50%;" />
+        <% } %>
+        <div style="padding: 30px;">
+          <h3><%= channel.metadata.title %></h3>
+          <span><%= channel.header.subscribers.text %></span><br>
+          <small style="color: gray;"><%= channel.header.videos_count.text %></small>
+        </div>
+      </div><br>
+      <div style="padding: 15px;">
+        <span>ℹ️ <%= about.joined.text %></span><br>
+        <% if (about.country?.text) { %><span>🌐 <%= about.country.text %></span><br><% } %>
+        <span>📊 <%= about.views.text %></span><br>
+        <pre style="margin-top: 20px;"><%= about.description %></pre>
+      </div>
+    </div>
+
+    <div id="relatedVideos">
+      <% channel.current_tab?.content?.contents?.forEach(video => { %>
+        <% video.contents.forEach(video => { %>
+          <%- include("comp/videolist.ejs", { video }); %>
+        <% }); %>
+      <% }); %>
+      <% videos.current_tab?.content?.contents?.forEach(video => { %>
+        <%- include("comp/videolist.ejs", { video: video.content }); %>
+      <% }); %>
+    </div>
+    
+    <style>
+      body {
+        display: block;
+      }
+    </style>
+  </body>
+</html>
