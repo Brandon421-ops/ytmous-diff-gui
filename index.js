@@ -31,7 +31,7 @@ let client;
 
 app.use(compression());
 
-// https://github.com/ytmous/ytmous/pull/25
+// https://github.com/Brandon421-ops/ytmous/pull/25
 app.use(function (req, res, next) {
   res.setHeader('X-Frame-Options', "SAMEORIGIN");
   res.setHeader('X-Content-Type-Options', "nosniff");
